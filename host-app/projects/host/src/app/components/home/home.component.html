@@ -1,0 +1,49 @@
+<div  class="content" >
+<div *ngIf="user;else login">
+  <h3>
+    Dear <span style="color: chocolate">{{user?.name }}</span> Welcome To HomePage
+  </h3>
+
+
+    <div class="grid-container">
+      <div class="grid-item" routerLink="/loan">
+        <mat-icon color="warn">payments</mat-icon>
+        <strong>loan</strong>
+        <span>You have {{loansCount}} loans pending payment</span>
+      </div>
+      <div class="grid-item" >
+          <mat-icon color="warn">work</mat-icon>
+          <strong>works</strong>
+          <span></span>
+        </div>
+      <div class="grid-item">
+          <mat-icon color="warn">grade</mat-icon>
+          <strong>score</strong>
+          <span>You have 3 loans pending payment</span>
+        </div>
+
+      <div class="grid-item">
+          <mat-icon color="warn">list</mat-icon>
+          <strong>tasks</strong>
+          <span>You have 3 loans pending payment</span>
+        </div>
+
+
+      <div class="grid-item">
+          <mat-icon color="warn">styles</mat-icon>
+          <strong>cards</strong>
+          <span>you have 2 active card</span>
+        </div>
+
+      </div>
+
+</div>
+
+  <ng-template #login>
+    <h3>
+      You have not logged in yet. Please login
+    </h3>
+    <button mat-button color="accent" routerLink="/login">SignIN</button>
+  </ng-template>
+
+</div>

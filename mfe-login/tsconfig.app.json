@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": [],
+    "target": "es2020"
+  },
+  "files": [
+    "src/main.ts",
+    "src/store.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts",
+    "src/app/login/login.module.ts"
+  ]
+}

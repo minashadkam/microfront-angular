@@ -1,0 +1,17 @@
+
+
+<mat-list *ngIf="loans?.length;else noLoan">
+  <mat-list-item *ngFor="let loan of loans;let i = index">
+    <div class="list-item">
+      <strong >{{loan.amount}}</strong>
+      <p  class="loan-date" >{{loan.startDate}} - {{loan.finalDate}}</p>
+    </div>
+    <button mat-button (click)="pay(i)">pay</button>
+  </mat-list-item>
+</mat-list>
+
+<ng-template #noLoan>
+<h3>
+  There is no loan for  <span style="color: chocolate">{{user?.name }}</span>
+</h3>
+</ng-template>

@@ -1,0 +1,26 @@
+.docs-navbar-header{
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4px 16px;
+  background: #3f51b5;
+  flex-direction: row;
+
+
+  .user {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    .mat-mini-fab {
+      color: #3f51b5;
+    }
+  }
+}
+
+
+.mat-drawer-container{
+  height: calc(100vh - 50px);
+}

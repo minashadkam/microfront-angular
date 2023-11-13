@@ -1,0 +1,47 @@
+<nav class="docs-navbar-header">
+  <button mat-mini-fab color="primary" (click)="openedMenu =!openedMenu" *ngIf="user">
+    <mat-icon>filter_list</mat-icon>
+  </button>
+
+  <div class="logo">
+    <button mat-button  routerLink="/">
+      <mat-icon>filter_vintage</mat-icon>
+      MainApp
+    </button>
+  </div>
+
+
+  <div class="user">
+    <button mat-mini-fab color="white" *ngIf="user">
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-button color="blue">
+      {{user?.name}}
+    </button>
+  </div>
+
+</nav>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+  <mat-drawer mode="side" [(opened)]="openedMenu">
+    <mat-list>
+      <div mat-subheader>services</div>
+      <mat-list-item  routerLink="/loan">
+        <mat-icon mat-list-icon>credit_card</mat-icon>
+        <div>loan({{loanCount}})</div>
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+
+      <div mat-subheader>monitoring</div>
+      <mat-list-item>
+        <mat-icon mat-list-icon>pie_chart</mat-icon>
+        <div >debit card report</div>
+      </mat-list-item>
+    </mat-list>
+
+  </mat-drawer>
+</mat-drawer-container>
