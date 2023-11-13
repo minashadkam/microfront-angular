@@ -31,7 +31,7 @@
       <div mat-subheader>services</div>
       <mat-list-item  routerLink="/loan">
         <mat-icon mat-list-icon>credit_card</mat-icon>
-        <div>loan({{loanCount}})</div>
+        <div>loan<span  style="padding: 5px" *ngIf="loanCount" [matBadge]="loanCount.toString()" matBadgeSize="large"  matBadgeColor="accent"></span></div>
       </mat-list-item>
 
       <mat-divider></mat-divider>

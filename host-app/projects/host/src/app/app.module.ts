@@ -11,6 +11,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import {MatMenuModule} from "@angular/material/menu";
 import {MatListItem, MatListModule} from "@angular/material/list";
+import {MatBadgeModule} from "@angular/material/badge";
 
 
 
@@ -18,7 +19,7 @@ export let AppInjector: Injector;
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MatSidenavModule, MatButtonModule, MatIconModule, MatMenuModule, MatListModule ],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MatSidenavModule, MatButtonModule, MatIconModule, MatMenuModule, MatListModule, MatBadgeModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {
